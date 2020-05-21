@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: movieinfoserviceimg 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: movieinfoserviceimg 
+    spec:
+      containers:
+        - name: movieinfoserviceimg 
+          image: anilsiri80cr.azurecr.io/movieinfoserviceimg
+          ports:
+          - containerPort: 8090
